@@ -1,14 +1,11 @@
 package br.com.aledsz.monjadoces.models;
 
-import java.util.Date;
-
 /**
  *
  * @author aleDsz
  */
-public class Product {
+public class Product extends Model {
 
-    private int id;
     private int categoryId;
     private int unityId;
     private String slug;
@@ -16,16 +13,6 @@ public class Product {
     private String description;
     private double price;
     private boolean status;
-    private Date insertedAt;
-    private Date updatedAt;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
     
     public int getCategoryId() {
         return categoryId;
@@ -81,21 +68,5 @@ public class Product {
 
     public void setStatus(boolean status) {
         this.status = status;
-    }
-
-    public Date getInsertedAt() {
-        return insertedAt;
-    }
-
-    public void setInsertedAt(Date insertedAt) {
-        this.insertedAt = insertedAt;
-    }
-
-    public Date getUpdatedAt() {
-        return updatedAt;
-    }
-
-    public void setUpdatedAt(Date updatedAt) {
-        this.updatedAt = updatedAt;
     }
 }

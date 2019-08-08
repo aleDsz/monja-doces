@@ -1,14 +1,11 @@
 package br.com.aledsz.monjadoces.models;
 
-import java.util.Date;
-
 /**
  *
  * @author aleDsz
  */
-public class Transaction {
+public class Transaction extends Model {
 
-    private int id;
     private int paymentMethodId;
     private int machineId;
     private int acquirerId;
@@ -18,16 +15,6 @@ public class Transaction {
     private String acquirerNSU;
     private String acquirerCode;
     private String acquirerMessage;
-    private Date insertedAt;
-    private Date updatedAt;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public int getPaymentMethodId() {
         return paymentMethodId;
@@ -99,21 +86,5 @@ public class Transaction {
 
     public void setAcquirerMessage(String acquirerMessage) {
         this.acquirerMessage = acquirerMessage;
-    }
-
-    public Date getInsertedAt() {
-        return insertedAt;
-    }
-
-    public void setInsertedAt(Date insertedAt) {
-        this.insertedAt = insertedAt;
-    }
-
-    public Date getUpdatedAt() {
-        return updatedAt;
-    }
-
-    public void setUpdatedAt(Date updatedAt) {
-        this.updatedAt = updatedAt;
     }
 }

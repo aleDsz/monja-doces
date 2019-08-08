@@ -1,15 +1,13 @@
 package br.com.aledsz.monjadoces.models;
 
 import br.com.aledsz.monjadoces.enums.StockMovementTypes;
-import java.util.Date;
 
 /**
  *
  * @author aleDsz
  */
-public class StockItem {
+public class StockItem extends Model {
 
-    private int id;
     private int userId;
     private int stockId;
     private int productId;
@@ -18,16 +16,6 @@ public class StockItem {
     private double oldQuantity;
     private double movementQuantity;
     private double actualQuantity;
-    private Date insertedAt;
-    private Date updatedAt;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
     
     public int getUserId() {
         return userId;
@@ -99,21 +87,5 @@ public class StockItem {
 
     public void setActualQuantity(double actualQuantity) {
         this.actualQuantity = actualQuantity;
-    }
-
-    public Date getInsertedAt() {
-        return insertedAt;
-    }
-
-    public void setInsertedAt(Date insertedAt) {
-        this.insertedAt = insertedAt;
-    }
-
-    public Date getUpdatedAt() {
-        return updatedAt;
-    }
-
-    public void setUpdatedAt(Date updatedAt) {
-        this.updatedAt = updatedAt;
     }
 }
