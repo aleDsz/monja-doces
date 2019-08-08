@@ -1,14 +1,21 @@
-Monja Doces
-=========
+# MonjaDoces
 
-# Introduction
+**TODO: Add description**
 
-Monja Doces, where you can be in peace and happy after eating one of our candies.
+## Installation
 
+If [available in Hex](https://hex.pm/docs/publish), the package can be installed
+by adding `monja_doces` to your list of dependencies in `mix.exs`:
 
-# To-Do List (Docs)
+```elixir
+def deps do
+  [
+    {:monja_doces, "~> 0.1.0"}
+  ]
+end
+```
 
- - Implementation of flow to possible machine failures during product withdraw operation
- - Implementation of action where user can cancel operation in any step before product withdraw operation
- - Implementation of action where user can buy more than one product in a single request
- - Implementation of action where user received product and machine need to print the charge's receipt
+Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
+and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
+be found at [https://hexdocs.pm/monja_doces](https://hexdocs.pm/monja_doces).
+
