@@ -6,7 +6,6 @@ defmodule MonjaDoces.Schemas.Customer do
   alias MonjaDoces.Schemas.Machine
 
   @primary_key {:id, :id, autogenerate: true}
-  @foreign_key {:id, type: :integer}
 
   schema "customers" do
     field :name, :string
@@ -17,7 +16,7 @@ defmodule MonjaDoces.Schemas.Customer do
 
     timestamps()
   end
-  
+
   def changeset(%__MODULE__{} = schema, attrs) when is_map(attrs) do
     schema
     |> cast(attrs, [:name, :business_name, :document])

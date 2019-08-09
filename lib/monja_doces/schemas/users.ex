@@ -6,16 +6,15 @@ defmodule MonjaDoces.Schemas.User do
   import Ecto.Changeset
 
   @primary_key {:id, :id, autogenerate: true}
-  @foreign_key {:id, type: :integer}
 
   schema "users" do
     field :name, :string
     field :code_access, :string
     field :password_access, :string
-    
+
     timestamps()
   end
-  
+
   def changeset(%__MODULE__{} = schema, attrs) when is_map(attrs) do
     schema
     |> cast(attrs, [:name, :code_access, :password_access])
