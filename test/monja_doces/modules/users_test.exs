@@ -1,6 +1,6 @@
 defmodule MonjaDoces.Test.Modules.Users do
   use ExUnit.Case, async: false
-  
+
   alias MonjaDoces.Modules.Users
 
   setup do
@@ -28,27 +28,27 @@ defmodule MonjaDoces.Test.Modules.Users do
 
     %{user_map: user_map, user: user}
   end
-  
-  describe "with Users do" do
-    test "create a user", %{user_map: user_map} do
+
+  describe "generated basic parameters" do
+    test "should create a user", %{user_map: user_map} do
       {:ok, new_user} = Users.create(user_map)
 
       assert new_user.name == user_map.name
     end
-    
-    test "update a user", %{user: user} do
+
+    test "should update a user", %{user: user} do
       {:ok, user} = Users.update(user.id, %{name: "Monja Doces"})
 
       assert user.name == "Monja Doces"
     end
-    
-    test "retrieve a user", %{user: user} do
+
+    test "should retrieve a user", %{user: user} do
       {:ok, get_user} = Users.get(user.id)
 
       assert get_user.id == user.id
     end
-    
-    test "retrieve a list of users", %{} do
+
+    test "should retrieve a list of users", %{} do
       {:ok, users} = Users.retrieve_all()
 
       assert length(users) > 0
