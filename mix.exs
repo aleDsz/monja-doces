@@ -26,9 +26,9 @@ defmodule MonjaDoces.MixProject do
       {:plug, "~> 1.8"},
       {:cowboy, "~> 2.6"},
       {:myxql, "~> 0.2.6"},
-      
+
       {:faker, "~> 0.12.0", only: :test},
-      {:brcpfcnpj, "~> 0.2.0", only: :test}
+      {:brcpfcnpj, "~> 0.2.0"}
     ]
   end
 end
